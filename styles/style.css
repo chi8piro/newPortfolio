@@ -1,0 +1,761 @@
+@charset "UTF-8";
+/*Googlフォント*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto+Slab:wght@100..900&family=Sriracha&display=swap');
+
+/*全体設定*/
+body{
+    font-family: "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", serif;
+    background: url("../images/Meatbun.png") repeat;
+    background-color: rgb(252, 243, 214);
+    font-size: 20px;
+    text-align: center;
+}
+
+/*トップとサブトップの設定*/
+.TopBox_pc{
+    position: relative;
+}
+.TopImage{  /* img を背景 cover のようにする */
+    max-width: 100%;
+    object-fit: cover;       /* ← これが background-size: cover と同じ */
+    object-position: center; /* ← これが background-position: center と同じ */
+}
+
+/*トップ画像の設定*/
+.TopImage{
+    position: relative;
+    background-color: #f88a4a;
+    height: 300px;
+}
+.TopImage .HKImage{
+    width: 40%;
+}
+.TopImage .TopFrameTop{
+    position: absolute;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    opacity: 0.9;
+}
+.TopImage .TopFrameBottom{
+    position: absolute;
+    transform: rotate(180deg);
+    height: 100%;
+    bottom: 0%;
+    right: 0%;
+    opacity: 0.9;
+}
+.TopImage .TopImageContent {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+}
+.TopImage .TopImageContent .TopLogo{
+    display: inline-block;
+    color: #fff;
+    font-size: 300%;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    padding: 50px 0;
+    margin: 60px 0;
+    height: 100px;
+}
+
+
+
+/*文字の設定*/
+h1{
+    font-size: 48px;
+}
+h1 .SubTitle{
+    font-size: 24px;
+}
+h2{
+    font-size: 30px;
+    text-decoration-line: underline;
+}
+
+/*Aboutの調整*/
+/*背景の調整*/
+.Profile,.Personality,.History,.Skills{ 
+    background-color: rgb(255, 255, 246, 0.97);
+    width: 80%;
+    margin: 0 auto 40px;
+    padding: 40px;
+    border-radius: 10px;
+}
+/*線の設定*/
+.LongVerticalLine {
+  border: none;
+  border-left: 2px solid #333;
+  height: 50px;
+  margin: 2%;
+}
+.ShortVerticalLine {
+  border: none;
+  border-left: 2px solid #333;
+  height: 30px;
+  margin: 2%;
+}
+
+/*Profileのレイアウト*/
+.About .Profile .ProfileContent{
+    display: grid;
+    grid-template-columns: 7em 1fr;
+    gap: 8px 16px;
+    text-align: left;
+    width: 700px;
+    margin: 30px auto;
+}
+.About .Profile .ProfileContent dt{
+    margin-bottom: 10px;
+}
+.About .Profile .ProfileContent dd{
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+
+/*Personalityのレイアウト*/
+.About .Personality dt{
+    margin-bottom: 10px;
+}
+.About .Personality dd{
+    font-size: 17px;
+    margin-bottom: 25px;
+    line-height: 1.5em;
+}
+.About .Personality .PersonalityContent{
+    width: 75%;
+    margin: 10px auto;
+}
+
+/*Historyのレイアウト*/
+.History .HistoryContent{
+    width: 500px;
+    margin: 20px auto;
+}
+.History .HistoryContent li{
+    display: flex;
+    text-align: left;
+}
+
+/*Skillsのレイアウト*/
+.Skills .SkillsSet{
+    display: flex;
+    gap: 60px;
+    width: 500px;
+    margin: 20px auto;
+
+}
+.Skills .SkillsSet p{
+    background-color: antiquewhite;
+    width: 200px;
+    height: 60px;
+    padding: 20px;
+
+}
+
+/*Worksのレイアウト*/
+.Works .WorksContent .WorksSet img{
+    height: 30%;
+    margin: 0px auto 60px;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+.Works .WorksContent .WorksSet .ComingSoon{
+    background-color: #f88a4a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    height: 30%;
+    aspect-ratio: 2 / 1;
+    width: auto;
+    margin: 0px auto 60px;
+}
+
+.Works .WorksContent{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+}
+.Works .WorksContent .WorksSet{
+    width: 30%;
+    height: 500px;
+    background-color: rgb(255, 255, 246, 0.97);
+    margin: 0 auto 40px;
+    border-radius: 10px;
+}
+.Works .WorksContent .WorksSet p{
+    margin: 40px auto;
+    font-size: 18px;
+}
+.Works .WorksContent .WorksSet .ComingSoon p{
+    color: #fff;
+    width: 100px;
+    font-size: 200%;
+    font-family: 'Playfair Display SC', sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+.Works .WorksContent .WorksSet a{
+    display: block;
+    background-color: antiquewhite;
+    padding: 5px 10px;
+    border: 2px solid #333;
+    box-shadow: 0 4px 10px rgba(51, 51, 51, 0.25);
+    border-radius: 8px;
+    width: 220px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+.Works .WorksContent .WorksSet a:hover{
+    transform: translateY(-5px);
+    background-color: rgb(252, 211, 157);
+}
+
+/*Galleryのレイアウト*/
+.Gallery .GalleryContent{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.Gallery .GalleryContent img{
+    width: 50%;
+}
+
+
+
+
+/* グローバルヘッダーの共通スタイル */
+#GlobalHeader {
+    background-color:  rgb(255, 255, 255, 0.8); /* 背景色 */
+    color: #e43232;
+    width: 100%;
+    position: fixed; 
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* 影 */
+}
+
+/* コンテナ(pcで中央寄せ、または最大幅を設定する場合) */
+.HeaderNav{
+    max-width: 1200px; /* pcでの最大幅(必要に応じて調整) */
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* ロゴとナビを左右に配置 */
+    align-items: center;
+    height: 60px; /* ヘッダーの高さを設定 */
+}
+
+.NavList{
+    list-style: none;
+    display: flex;
+    gap: 40px; 
+    padding: 0;
+    margin: 0;
+}
+
+/* ホバーエフェクト(マウスオーバー時) */
+.NavItem a:hover{
+    color: #ccc; /* 薄いグレーに変化 */
+}
+
+
+
+/*ローディング*/
+/* ローディング全体の背景 */
+/*
+#Loading {
+  position: fixed;
+  inset: 0;
+  background-color: #0076b6; /* 好きな背景色に変更可 *//*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+*/
+/* ロゴ部分（画像を背景にする） */
+/*
+#LoadingLogo {
+  width: 250px;
+  height: 120px;
+
+  /* ここにロゴ画像を設定 *//*
+  background: url("../taichu/images/TopLogo1.svg") no-repeat center/contain;
+
+  opacity: 1;
+  transition: opacity 0.8s ease; /* JSの制御でフェード *//*
+} */
+
+
+
+
+
+
+
+
+/*スマホヘッダー非表示　ドロワー*/
+.TopBox_sp {
+    display: none;
+}
+.Logo1{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    width: 32px;
+}
+.Logo2{
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    width: 32px;
+}
+.Logo3{
+    position: absolute;
+    top: 85%;
+    left: 10%;
+    width: 32px;
+}
+
+/*PC版ではドロワー非表示*/
+#Nav{
+   display: none;
+}
+
+/* -footer--------- */
+#globalFooter{
+    background-color:  rgb(255, 255, 255); /* 背景色 */
+    color: #000000;
+    width: 100%;
+}
+.footerLogo img {
+    height: 40px; /* サイズ調整 */
+    width: auto;
+    margin: 20px auto;
+}
+.footerTopContainer {
+
+    
+}
+.copyrightBottom {
+    background-color:  rgb(255, 255, 255); /* 背景色 */
+    color: #000000;
+    width: 100%;
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+/* --- SP対応（ブレイクポイント: 768px） --- */
+@media (max-width: 768px) {
+    /*ドロワー パソコンヘッダー非表示*/ 
+    .header_pc{
+        display: none;
+    }
+    .TopBox_pc{
+        display: none;
+    }
+    .TopBox_sp{
+        display: block; 
+        position: relative;
+        height: 667px;
+    }
+    .header_sp{
+        position: absolute;
+        top: 4px;
+        left: 20px;
+    }
+    .TopBox_sp .header_sp #OpenIcon{
+        position: fixed;
+        top: 4px;
+        right: 4px;
+    }
+
+    /*ドロワー 装飾*/
+    #Nav{
+        display: block;
+        width: 225px;
+        height: 667px;
+        background-color: rgba(0, 122, 183, 0.9);
+        position: fixed;
+        right: -225px;
+        top: 0;
+    }
+    #Nav .DrawerLogo{
+        width: 101px;
+        margin: 8px 0 0 12px;
+    }
+    #Nav .DrawerClose{
+        width: 48px;
+        margin: 4px 4px 0 55px;
+    }
+    #Nav p{
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 80px auto 60px auto;
+        width: 70px;
+        text-align: center;
+        text-decoration: underline 1px;
+    }
+    #Nav ul{
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: underline 1px;
+    }
+    #Nav ul li{
+        margin: 40px auto;
+        width: 200px;
+        text-align: center;
+    }
+    #Nav ul .DrawerSet li{
+        margin: 20px auto;
+    }
+    /*ドロワー　オープンスタイル*/
+    .show{
+        transform: translatex(-225px);
+    }
+    /*ドロワー　開閉時アニメーション*/
+    #Nav{
+        transition: transform 0.3s;
+    }
+
+    
+    
+    .HeaderNav {
+        display: none;
+    }
+
+    /* 上段コンテナ: SPでロゴとSNSを横並びにするため、Blockに変更し、text-alignで中央寄せする */
+    .footerTopContainer {
+        display: block; /* ★★ Flexboxを解除し、Blockに戻す ★★ */
+        /* flex-direction: column; を上書き */
+        align-items: center; /* 無効 */
+        padding: 12px 12px;
+    }
+    
+    /* 台湾旗: block要素なので中央寄せされる */
+    .footerFlag {
+        margin-bottom: 30px;
+    }
+    
+    /* ナビゲーションリンク: block要素なので幅を制御しmargin: autoで中央寄せ */
+    .footerNavColumn {
+        width: 100%;
+        max-width: 300px; 
+        margin: auto auto; /* 下マージンを追加 */
+        padding-top: 0;
+        padding: 0 36px;
+    }
+
+    .footerLogo {
+        margin: 20px auto;
+        width: 20px;
+    }
+   
+.TopLogoC, .TopLogoO{
+    display: none;
+}
+.sp-TopLogo {
+    position: absolute;
+    top: 33%;
+    left: 5%;
+}
+
+
+  .SubTopBox1 {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    align-items: center;
+  }
+  .SubTopBox1 .Frag,
+  .SubTopBox1 .SubTopImg1,
+  .SubTopBox1 .SubTopSet1 {
+    position: static;
+    margin: 0 auto 20px auto;
+    width: auto;
+  }
+  .SubTopBox1 .Frag{
+        order: 1; 
+        width: 32px;
+        height: 24px;
+    }
+
+    .SubTopBox1 .SubTopSet1 p{
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 400;
+    }
+
+    .SubTopBox1 .SubTopSet1 span{
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 400;
+    }
+    .SubTopBox1 .SubTopSet1 {
+        order: 2;    /* 2番目：テキスト */
+    }
+
+    .SubTopBox1 .SubTopImg1{
+        order: 3;
+        width: 80%;          /* スマホ用縮小 */
+        max-width: 335px;
+    }
+
+    .SubTopBox1 .Line361 {
+    width: 125px;
+    margin-top: 10px;
+    }
+    .SubTopBox2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* 縦並びにする */
+    align-items: center;
+  }
+
+    .SubTopBox2 .SubTopSet2,
+    .SubTopBox2 .SubTopImg2 {
+        position: static;
+        width: 100%;
+         
+    }
+     /* ☆ スマホ時の並び順変更ポイント ☆ */
+    .SubTopBox2 .SubTopSet2 {
+        order: 1; /* 説明文を先に表示（上） */
+        position: static;
+        padding: 0 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+    }
+
+    .SubTopBox2 .SubTopImg2 {
+        order: 2; /* 画像を後に表示（下） */
+        margin-top: 50px;
+        width: 335px;
+    }
+    .SubTopBox2 p {
+        font-size: 12px;
+        line-height: 1.6;
+        font-weight: 400;
+        text-align: center;
+        margin: 10px auto;   /* ← 左右中央にする */
+      max-width: 223px;
+      height: 96px;
+    }
+
+    .SubTopBox2 .Line420 {
+      width: 223px;      /* ← p の max-width とそろえる */
+      margin: 10px auto; /* ← 中央に寄せる */
+      border: none;
+      border-top: 1px solid #000; /* 必要に応じて色調整 */
+  }
+  .SubTopSet2 {
+    margin-top: 16px;
+  }
+
+  /*スライドの＜＞をメディアクエリでは非表示にする*/
+  #prev,
+  #next {
+    display: none;
+  }
+
+
+ 
+    /*岡　担当部分（SPおすすめスポット以下）*/
+    /*テキストの装飾*/
+    p{
+        font-size: 12px;
+        line-height: 19.2px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h1 .SubTitle{
+        font-size: 12px;
+    }
+    .Travel .TravelSet1 .TravelSet2 p{
+        width: 220.98px;
+        margin: 12px auto;
+    }
+    /*タイトルの調整*/
+    .TitleLine{
+        width: 220px;
+    }
+    .TitleBoxG, .TitleBoxT, .TitleBoxE{
+        width: 220px;
+        margin: 20px auto 60px;
+        position: relative;
+    }
+    .TitleBoxG h1,
+    .TitleBoxE h1{
+        position: absolute;
+        top: 25%;
+        left: 5%;
+    }
+    .TitleBoxT h1{
+        position: absolute;
+        top: 25%;
+        right: 15%;  
+    }
+    .Event h3,h4{
+        font-size: 20px;
+        line-height: 32px;
+        width: 260px;
+        text-align: center;
+        margin: 0 auto 20px;
+    }
+
+    /*Travel部分*/
+    .Travel{
+        height: 807.8px;
+    }
+    .Travel .TravelSet1{
+        display: block;
+        height: 516x;
+        width: 255px;
+        margin: 60px auto;
+    }
+    .Travel .TravelSet1 img{
+        width: 255px;
+    }
+    .Travel .TravelSet1 .TravelSet2{
+        width: 220.98px;
+        margin: 60px auto;
+    }
+    .Travel .TravelSet1 .TravelSet2 p{
+        margin: 12px auto;
+    }
+    /*線の設定*/
+    .Travel .Line480{
+        width: 223px;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+
+    
+    /*ランタンフェスティバル説明文*/
+    .lantern-festival{
+        display: block;
+    }
+    .lantern-info-box{
+        margin: 20px auto 40px;
+        width: 266px;
+    }
+    /*開催期間の設定*/
+    .period-label {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 20px auto 8px;    
+    }
+    .date-info {
+        font-size: 12px;
+        margin: 8px auto 10px;
+    }
+    .springseason {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 19.2px;
+        align-items: initial;
+        border-bottom: 1px solid #000; 
+        border-top: 1px solid #000; /* 画像にある下線 */
+        padding: 12px 0px;
+        margin: 10px auto 40px;
+    }
+
+    /*カウントダウンパーティーの設定*/
+    /*開催期間の設定*/
+    .period-label2 {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 20px auto 8px;    
+    }
+    .countdown-party {
+        display: block;
+        margin: 40px auto 60px;
+        width: 335px;
+    }
+    .period-label2 {
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 12px;
+        margin: 20px auto 8px;    
+    }
+    .date-info2 {
+        font-size: 12px;
+        margin: 8px auto 10px;
+    }
+    .countdown-party-info {
+        width: 223px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 19.2px;
+        align-items: initial;
+        border-bottom: 1px solid #000; 
+        border-top: 1px solid #000; /* 画像にある下線 */
+        padding: 12px 0px;
+        margin: 10px auto 40px;
+    }
+
+
+    /* 台湾基本情報ボックス */
+    .taiwaninfo {
+        margin: 80px auto 60px; 
+        max-width: 335px;
+        border: 1px solid #8f8f8f;
+        padding: 20px;
+    }
+
+    /* タイトル */
+    .info-title {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .content-wrapper {
+        display: block;
+        font-size: 12px;
+        line-height: 19.2px;
+    }
+
+    .left-column{
+        margin-bottom: 40px;
+    }
+
+    /*画像設定*/
+    .Event .EventImg{
+        width: 335px;
+    }
+
+}
+
+
+
+   
