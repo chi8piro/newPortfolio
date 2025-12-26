@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="common/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Design House Renovations</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/logo.svg" alt="会社のロゴマーク">
+        <nav class="pcmenu">
+            <p>コンセプト</p>
+            <p>サービス</p>
+            <p>施工の流れ</p>
+            <p>よくあるご質問</p>
+            <p>お問い合わせ</p>
+        </nav>
+        <nav class="gMenu">
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="menu">
+                <li><a href="#">コンセプト</a></li>
+                <li><a href="#">サービス</a></li>
+                <li><a href="#">施工の流れ</a></li>
+                <li><a href="#">よくあるご質問</a></li>
+                <li><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>
+            <img class="img" src="images/hero2 .png" alt="ダイニングテーブルとイスなど室内の写真">
+        </p>
+        <div class="concept">
+            <h1>CONCEPT</h1>
+            <h2>——— コンセプト ———</h2>
+            <h3>家族が笑顔になれる場所</h3>
+            <p>家族が集う、温かく居心地の良い空間づくりを目指して、幅広い年代の方に安心して過ごしていただける空間づくりや、お手入れのしやすい素材を使用したリフォームをご提案いたします。</p>
+        </div>
+        <div class="service">
+            <h1>SERVICE</h1>
+            <h2>——— サービス ———</h2>
+            <div class="servicecontents">
+                <section>
+                    <img src="images/list-1-img.png" alt="浴室">
+                    <h3>浴室</h3>
+                    <p>ご家族が一緒に入れる広めの浴槽や手<br>すり等、安全性に配慮しています。</p>
+                    <p class="more">more▸</p>
+                </section>
+                <section>
+                    <img src="images/list-2-img.png" alt="浴室">
+                    <h3>リビング</h3>
+                    <p>照明や家具の配置等、くつろぎやすい<br>空間づくりを大切にしています。</p>
+                    <p class="more">more▸</p>
+                </section>
+                <section>
+                    <img src="images/list-3-img.png" alt="浴室">
+                    <h3>キッチン</h3>
+                    <p>機能性だけでなく、デザイン性にもこ<br>だわっております。</p>
+                    <p class="more">more▸</p>
+                </section>
+            </div>
+        </div>
+        <div class="flow">
+            <h1>FLOW</h1>
+            <h2>——— 施工の流れ ———</h2>    
+            <div class="flowcontents">
+                <p class="flowtext">ご相談</p>
+                <img src="images/arrow1.svg" alt="右矢印" class="tri">
+                <p class="flowtext">現地調査</p>
+                <img src="images/arrow2.svg" alt="右矢印" class="tri">
+                <p class="flowtext">お見積り</p>
+                <img src="images/arrow3.svg" alt="右矢印" class="tri">
+                <p class="flowtext">ご契約</p>
+                <img src="images/arrow4.svg" alt="右矢印" class="tri">
+                <p class="flowtext">施工</p>
+                <img src="images/arrow5.svg" alt="右矢印" class="tri">
+                <p class="flowtext">お引渡し</p>
+            </div>
+        </div>
+        <div class="qanda">
+            <h1>Q&A</h1>
+            <h2>——— よくあるご質問 ———</h2>    
+            <div class="Q1">
+                <div class="q">
+                    <span class="question"> Q.</span>
+                    <p>見積りは無料ですか？</p>
+                </div>
+                <div class="a">
+                    <span class="answer"> A.</span>
+                    <p>はい。お見積りは無料で承っております。ホームページよりお気軽にお問い合わせください。</p>
+                </div>
+            </div>
+            <div class="Q2">
+                <div class="q">
+                    <span class="question"> Q.</span>
+                    <p>普段通り生活をしながらのリフォーム工事は可能ですか？</p>
+                </div>
+                <div class="a">
+                    <span class="answer"> A.</span>
+                    <p>はい。もちろん可能です。工事中の箇所は、何日間か使用できなくなる場合もございますのであ<br>らかじめご了承ください。大型リフォームの場合には、仮住まいもお薦めしております。</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <h1>CONTACT</h1>
+            <h2>——— お問い合わせ ———</h2>    
+            <form>
+                <div class="form">
+                    <p class="radio">
+                        <label class="title">お問い合わせ種別</label><span class="required">必須</span><br>
+                        <input type="radio" name="Inquiry type" value="資料請求">資料請求
+                        <input type="radio" name="Inquiry type" value="ご相談">ご相談
+                    </p>
+                    <div class="input1">
+                        <p><label class="title">お名前</label><span class="required">必須</span><br><input type="text" name="user_name"placeholder="例）山田　太郎"></p>
+                        <p><label class="title">フリガナ</label><span class="required">必須</span><br><input type="text" name="furigana"placeholder="例）ヤマダ　タロウ"></p>
+                        <p><label class="title">電話番号</label><span class="required">必須</span><br><input type="text" name="phone_number"placeholder="例）090-1234-5678"></p>
+                    </div>
+                    <p><label class="title">住所</label><span class="required">必須</span><br><div class="input12">〒<input type="text" name="postnumber"placeholder="例）123-4567"></div></p>
+                    <div class="input2">
+                        <input type="text" name="adress" placeholder="例）●●県●●市●●区●●町●丁目●番地●号"></p>
+                        <p><label class="title">メールアドレス</label><span class="required">必須</span><br><input type="email" name="user_mail"></p>
+                        <p><label class="title">メールアドレス(確認用)</label><span class="required">必須</span><br><input type="email" name="user_mail"></p>
+                        <p><label class="title">お問い合わせ内容</label><br><input type="text" name="details" class="titleaskinput"></p>
+                    </div>
+                </div>
+                <p><button type="submit">入力内容を確認する▸</button></p>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2023 Design House Renovations</p>
+    </footer>
+</body>
+</html>
